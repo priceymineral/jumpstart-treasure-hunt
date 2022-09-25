@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>treasurehunt</title>
+  <link rel="stylesheet" href="treasurehunt.css">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="https://pngimg.com/uploads/treasure_chest/treasure_chest_PNG21.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero"></div>
+    <h1>TreasureHunt</h1>
+    <h2>You want to play a game?</h2>
+    <!-- <img src="https://c4.wallpaperflare.com/wallpaper/862/989/300/pirates-ship-sea-map-wallpaper-thumb.jpg" alt="treasurehunt"> -->
+    <ul>
+      <li>Click the boxes to reveal what’s on the map</li>
+      <li>If you click on the bomb, you lose</li>
+      <li>If you click on the treasure, you win</li>
+    </ul>
+
+    <div class="table">
+      <table border=1>
+        <tr>
+          <td id=0 onclick="treasure(0)">?</td>
+          <td id=1 onclick="treasure(1)">?</td>
+          <td id=2 onclick="treasure(2)">?</td>
+        </tr>
+        <tr>
+          <td id=3 onclick="treasure(3)">?</td>
+          <td id=4 onclick="treasure(4)">?</td>
+          <td id=5 onclick="treasure(5)">?</td>
+        </tr>
+        <tr>
+          <td id=6 onclick="treasure(6)">?</td>
+          <td id=7 onclick="treasure(7)">?</td>
+          <td id=8 onclick="treasure(8)">?</td>
+        </tr>
+      </table>
+    </div>
+    <div id="counter">*Attempt Tracker*</div>
+
+    <div class="restart">
+      <button type="button" onclick="location.reload()">Restart Game</button>
+    </div>
+    <footer>&copy Gary Overstreet | Paulina Segovia | Octavio Sifuentes |
+      <a href="https://en.wikipedia.org/wiki/Treasure_hunting" target="_blank">Treasure Hunt</a>
+    </footer>
+    <script type="text/javascript" src="treasurehunt.js"></script>
+</body>
+</html>
+
+
