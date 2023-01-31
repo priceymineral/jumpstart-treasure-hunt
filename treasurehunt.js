@@ -21,21 +21,27 @@ console.log('bomb_2 location: ', bomb_2_location);
 
 var max_attempts = 6;
 var attempts = 0;
+var gameOver = false;
 
 const treasure = (id) => {
+  if (gameOver) return;
+
   attempts++;
   document.getElementById("counter").innerHTML = `Attempts : ${attempts}`;
 
   if (attempts === max_attempts) {
-    alert('You reached the max number of attempts, you lose :/')
+    alert('You reached the max number of attempts, you lose :/');
+    gameOver = true;
   }
-
+  
   if (id === bomb_location || id === bomb_2_location) {
     document.getElementById(id).innerHTML = "&#x2620";
     alert(`you clicked the bomb, you dead :(`);
+    gameOver = true;
   } else if (id === treasure_location) {
     document.getElementById(id).innerHTML = "&#x1f308";
     alert(`you found the treasure, you rich :)`);
+    gameOver = true;
   } else {
     document.getElementById(id).innerHTML = "&#x1f332";
     // alert(`you clicked ${id}, keep trying`)
